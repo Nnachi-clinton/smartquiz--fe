@@ -6,6 +6,7 @@ import { GlobalProvider } from "../src/context/GlobalState.js";
 import HomePage from "../src/pages/Home.js";
 import Login from "../src/pages/authentication/Login.js";
 import Signup from "../src/pages/authentication/signup/Signup.js";
+import ResetPassword from "./pages/authentication/resetpassword/ResetPassword.js";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/resetpassword" element={<ResetPassword />} />
               </Routes>
             </AuthState>
           </GlobalProvider>
