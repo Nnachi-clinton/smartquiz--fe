@@ -1,7 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import Signin from "../../pages/authentication/images/Signin.svg";
-// import SmartLogo from "../../pages/authentication/images/Smartlogo.svg";
+import SmartLogo from "../../pages/authentication/images/Smartlogo.svg";
+import Form from "./Form.js";
 
 function Login() {
   return (
@@ -9,7 +10,8 @@ function Login() {
       <Div2>
         <Column>
           <Div3>
-            <Div4>Smart Quiz</Div4>
+            {/* <Div4>Smart Quiz</Div4> */}
+            <Div4 loading="lazy" src={SmartLogo} />
             <Div5>Welcome back to Smart Quiz</Div5>
             <Div6>
               <Div7>
@@ -25,16 +27,7 @@ function Login() {
               <Div11>OR</Div11>
               <Div12 />
             </Div9>
-            <Div13>Email Address</Div13>
-            <Div14>deborahologun@gmail.com</Div14>
-            <Div15>Password</Div15>
-            <Div16>
-              <Div17>**********</Div17>
-              <Img2
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d14111f88505ffe416e034173b3986e7b27290a40e40735d3156735aa9f48e72?"
-              />
-            </Div16>
+            <Form />
             <Div18>Forgot password</Div18>
             <Div19>Login</Div19>
             <Div20>
@@ -57,12 +50,14 @@ export default Login;
 const Div = styled.div`
   background-color: #fff;
   padding-left: 64px;
+  height: 60% !important;
   @media (max-width: 991px) {
     padding-left: 20px;
   }
 `;
 const SignUpLink = styled.span`
   font-weight: 600;
+  cursor: pointer;
   text-decoration: underline;
   color: rgba(108, 99, 255, 1);
 `;
@@ -104,7 +99,7 @@ const Div3 = styled.div`
   }
 `;
 
-const Div4 = styled.div`
+const Div4 = styled.img`
   color: var(--Secondary, #2f2e41);
   letter-spacing: -0.32px;
   align-self: center;
@@ -135,7 +130,8 @@ const Div6 = styled.div`
   background-color: var(--White, #fff);
   display: flex;
   margin-top: 32px;
-  width: 100%;
+  margin-left: 0px;
+  width: 75%;
   flex-direction: column;
   padding: 12px 60px;
   @media (max-width: 991px) {
@@ -146,6 +142,7 @@ const Div6 = styled.div`
 const Div7 = styled.div`
   display: flex;
   gap: 8px;
+  cursor: pointer;
 `;
 
 const Img = styled.img`
@@ -198,71 +195,10 @@ const Div12 = styled.div`
   margin: auto 0;
 `;
 
-const Div13 = styled.div`
-  color: #000;
-  letter-spacing: -0.16px;
-  align-self: stretch;
-  margin-top: 29px;
-  font: 400 16px/150% Lato, sans-serif;
-`;
-
-const Div14 = styled.div`
-  color: var(--Gray60, #9e9e9e);
-  letter-spacing: -0.16px;
-  white-space: nowrap;
-  align-items: start;
-  border-radius: 8px;
-  background-color: var(--Gray20, #f5f5f5);
-  align-self: stretch;
-  margin-top: 8px;
-  justify-content: center;
-  padding: 8px 60px 8px 12px;
-  font: 400 16px/150% Lato, sans-serif;
-  @media (max-width: 991px) {
-    white-space: initial;
-    padding-right: 20px;
-  }
-`;
-
-const Div15 = styled.div`
-  color: #000;
-  letter-spacing: -0.16px;
-  align-self: stretch;
-  margin-top: 24px;
-  font: 400 16px/150% Lato, sans-serif;
-`;
-
-const Div16 = styled.div`
-  border-radius: 8px;
-  background-color: var(--Gray20, #f5f5f5);
-  align-self: stretch;
-  display: flex;
-  margin-top: 8px;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 8px 12px;
-`;
-
-const Div17 = styled.div`
-  color: var(--Gray60, #9e9e9e);
-  letter-spacing: -0.16px;
-  font: 400 16px/150% Lato, sans-serif;
-`;
-
-const Img2 = styled.img`
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 16px;
-  overflow: hidden;
-  align-self: center;
-  max-width: 100%;
-  margin: auto 0;
-`;
-
 const Div18 = styled.div`
   color: var(--Blue-600, #1570ef);
   letter-spacing: 0.15px;
+  cursor: pointer;
   text-decoration-line: underline;
   align-self: stretch;
   margin-top: 4px;
@@ -272,8 +208,8 @@ const Div18 = styled.div`
 const Div19 = styled.div`
   color: var(--White, #fff);
   white-space: nowrap;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  cursor: pointer;
   border-radius: 8px;
   background-color: var(--Primary, #6c63ff);
   align-self: stretch;
@@ -302,8 +238,8 @@ const Column2 = styled.div`
   display: flex;
   flex-direction: column;
   line-height: normal;
-  width: 64%;
-  margin-left: 20px;
+  width: 60%;
+  margin-left: 90px;
   @media (max-width: 991px) {
     width: 100%;
   }
@@ -330,7 +266,7 @@ const Div21 = styled.div`
 const Img3 = styled.img`
   position: absolute;
   inset: 0;
-  height: 30;
+  height: fit;
   width: 100%;
   object-fit: cover;
   object-position: center;
