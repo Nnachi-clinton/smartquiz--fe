@@ -4,6 +4,7 @@ import ErrorBoundary from "../src/components/common/ErrorBoundary.js";
 import AuthState from "../src/context/auth/AuthState.js";
 import { GlobalProvider } from "../src/context/GlobalState.js";
 import HomePage from "../src/pages/Home.js";
+import Login from "../src/pages/authentication/Login.js";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <AuthState>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<Login />} />
               </Routes>
             </AuthState>
           </GlobalProvider>
