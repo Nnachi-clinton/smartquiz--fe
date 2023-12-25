@@ -5,6 +5,7 @@ import AuthState from "../src/context/auth/AuthState.js";
 import { GlobalProvider } from "../src/context/GlobalState.js";
 import HomePage from "../src/pages/Home.js";
 import Login from "../src/pages/authentication/Login.js";
+import Signup from "../src/pages/authentication/signup/Signup.js";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
               </Routes>
             </AuthState>
           </GlobalProvider>

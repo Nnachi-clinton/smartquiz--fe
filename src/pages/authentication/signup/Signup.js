@@ -1,17 +1,17 @@
 import * as React from "react";
 import styled from "styled-components";
-import Signin from "../../pages/authentication/images/Signin.svg";
-import SmartLogo from "../../pages/authentication/images/Smartlogo.svg";
-import Form from "./Form.js";
+import Signin from "../../../pages/authentication/images/Signin.svg";
+import SmartLogo from "../../../pages/authentication/images/Smartlogo.svg";
+import Form from "./Form1.js";
 
-function Login() {
+function Signup() {
   return (
     <Div>
       <Div2>
         <Column>
           <Div3>
             <Div4 loading="lazy" src={SmartLogo} />
-            <Div5>Welcome back to Smart Quiz</Div5>
+            <Div5>Create a new account</Div5>
             <Div6>
               <Div7>
                 <Img
@@ -27,10 +27,10 @@ function Login() {
               <Div12 />
             </Div9>
             <Form />
-            <Div18>Forgot password</Div18>
-            <Div19>Login</Div19>
+
+            <Div19>Sign Up</Div19>
             <Div20>
-              Don't have an account ? <SignUpLink>Sign up here</SignUpLink>
+              Already have an account ? <SignUpLink>Sign in here</SignUpLink>
             </Div20>
           </Div3>
         </Column>
@@ -44,7 +44,7 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;
 
 const Div = styled.div`
   background-color: #fff;
@@ -192,16 +192,6 @@ const Div12 = styled.div`
   width: 173px;
   height: 1px;
   margin: auto 0;
-`;
-
-const Div18 = styled.div`
-  color: var(--Blue-600, #1570ef);
-  letter-spacing: 0.15px;
-  cursor: pointer;
-  text-decoration-line: underline;
-  align-self: stretch;
-  margin-top: 4px;
-  font: 400 16px/140% Inter, sans-serif;
 `;
 
 const Div19 = styled.div`
