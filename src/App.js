@@ -7,6 +7,7 @@ import HomePage from "../src/pages/Home.js";
 import Login from "../src/pages/authentication/Login.js";
 import Signup from "../src/pages/authentication/signup/Signup.js";
 import ResetPassword from "./pages/authentication/resetpassword/ResetPassword.js";
+import ChangePassword from "./pages/authentication/changepassword/ChangePassword.js";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/resetpassword" element={<ResetPassword />} />
+                <Route path="/ChangePassword" element={<ChangePassword />} />
               </Routes>
             </AuthState>
           </GlobalProvider>
