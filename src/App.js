@@ -8,6 +8,8 @@ import Login from "../src/pages/authentication/Login.js";
 import Signup from "../src/pages/authentication/signup/Signup.js";
 import ResetPassword from "./pages/authentication/resetpassword/ResetPassword.js";
 import ChangePassword from "./pages/authentication/changepassword/ChangePassword.js";
+import EmailConfirmation from "./pages/authentication/modal/Emailsent.js";
+import PasswordUpdate from "./pages/authentication/modal/PasswordUpdate.js";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/resetpassword" element={<ResetPassword />} />
                 <Route path="/ChangePassword" element={<ChangePassword />} />
+                <Route path="/emailsent" element={<EmailConfirmation />} />
+                <Route path="/PasswordUpdate" element={<PasswordUpdate />} />
               </Routes>
             </AuthState>
           </GlobalProvider>
